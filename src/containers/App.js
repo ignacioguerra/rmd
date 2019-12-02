@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
-import { Container } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import CharacterMenu from '../components/CharacterMenu'
+import Character from '../components/Character'
+
 
 const characters = [
   { name: 'Santiago Cafiero', role: 'Jefe de Gabinete', confirmed: true, description: '', age: null },
@@ -31,14 +35,62 @@ const characters = [
   { name: 'Marco Lavagna', role: 'Titular del INDEC', confirmed: false, description: '', age: null },
   { name: 'Carlos Zannini', role: 'Procurador del Tesoro', confirmed: false, description: '', age: null }
 ]
+const COLS = 6;
 
 class App extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      current: 0
+    }
+  }
+
+  componentDidMount() {
+    window.addEventListener('keydown', this.keyPressed, false);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('keydown', this.keyPressed, false);
+  }
+
+  keyPressed = (e) => {
+    e.preventDefault();
+    let current = this.state.current;
+    if(e.key === 'ArrowDown') {
+      current += COLS;
+    }
+    if(e.key === 'ArrowUp') {
+      current -= COLS;
+      // if(current < 0) current = characters.length - characters.length%6;
+    }
+    if(e.key === 'ArrowRight') {
+      current++;
+      // if(current >= characters.length) current = 0;
+    }
+    if(e.key === 'ArrowLeft') {
+      current--;
+      // if(current < 0) current = characters.length - 1;
+    }
+    
+    
+    if(current >= 0 && current < characters.length && current !== this.state.current) this.setState({ current });
+  }
+
   render() {
 
+    const currentCharacter = characters[this.state.current];
+
     return (
-      <Container className="App">
-        sdaf sdf
+      <Container>
+        <Row>
+          <Col md="2">
+            <Character {...currentCharacter} />
+          </Col>
+          <Col md="9">
+            <CharacterMenu characters={characters} current={this.state.current} />
+          </Col>
+        </Row>
       </Container>
     );
   }
