@@ -4,12 +4,13 @@ import { Row, Col } from 'react-bootstrap';
 import CharacterOption from './CharacterOption'
 
 const Wrapper = styled.div`
-  border: 1px solid #ccc;
-  padding: 10px;
+  text-align: center;
   overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
 `
 
-class CharacterMenu extends Component {
+class CharacterList extends Component {
 
   constructor(props) {
     super(props);
@@ -21,8 +22,9 @@ class CharacterMenu extends Component {
 
   render() {
 
+    const size = (this.props.cols) ? (100 / this.props.cols) - 1 : 19;
     const characters = this.props.characters.map((item, index) => {
-      return <CharacterOption key={item.name} {...item} selected={index === this.props.current} />
+      return <CharacterOption size={size} key={'charop-' + index} {...item} selected={index === this.props.current} />
     })
 
     return (
@@ -33,4 +35,4 @@ class CharacterMenu extends Component {
   }
 }
 
-export default CharacterMenu;
+export default CharacterList;
