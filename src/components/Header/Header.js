@@ -29,6 +29,25 @@ const Header = (props) => {
           <li><a href="#">Viral</a></li>
         </ul>
       </nav>
+      <div className="social">
+                    <p>@RDMDiario</p>
+                    <div className="gallery">
+                        <div className="pic img"></div>
+                        <div className="pic img"></div>
+                        <div className="pic img"></div>
+                        <div className="pic img"></div>
+                        <div className="pic img"></div>
+                        <div className="pic img"></div>
+                        <div className="pic img"></div>
+                        <div className="pic img"></div>
+                    </div>
+                </div>
+                <ul className="user">
+                    <li><a href="#">Mi perfil</a></li>
+                    <li><a href="#">Actividad</a></li>
+                    <li><a href="#">Preferencias</a></li>
+                    <li><a href="#">Salir</a></li>
+                </ul>
     </Wrapper>
   );
 }

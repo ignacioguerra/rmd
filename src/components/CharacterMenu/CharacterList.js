@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
-import { Row, Col } from 'react-bootstrap';
 import CharacterOption from './CharacterOption'
 
 const Wrapper = styled.div`
-  text-align: center;
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
@@ -35,4 +33,4 @@ class CharacterList extends Component {
   }
 }
 
-export default CharacterList;
+export default React.memo(CharacterList);

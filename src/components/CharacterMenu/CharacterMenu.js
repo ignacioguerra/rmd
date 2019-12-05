@@ -6,7 +6,19 @@ import Character from './Character';
 
 const Wrapper = styled(Row)`
   padding-top: 1em;
-  padding-bottom: 1em;
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+  position: relative;
+  
+  &::after {
+    content:"";
+    display:block;
+    position: absolute;
+    border-bottom: 1px solid #ddd;
+    bottom: 0;
+    left: 15px;
+    right: 15px;
+  }
 `
 
 class CharacterMenu extends Component {
@@ -60,10 +72,10 @@ class CharacterMenu extends Component {
 
     return (
       <Wrapper>
-        <Col md="9">
+        <Col md="7">
           <CharacterList cols={cols} characters={characters} current={current} />
         </Col>
-        <Col md="3">
+        <Col md="5">
           <Character {...characters[current]} />
         </Col>
       </Wrapper>
@@ -75,4 +87,4 @@ CharacterMenu.defaultProps = {
   cols: 5
 }
 
-export default CharacterMenu;
+export default React.memo(CharacterMenu);
