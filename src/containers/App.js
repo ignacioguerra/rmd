@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBookmark, faHeart } from '@fortawesome/free-regular-svg-icons'
-import { faShareAlt, faComment } from '@fortawesome/free-solid-svg-icons'
 import Header from '../components/Header/Header'
+import ArticleHeader from '../components/Article/ArticleHeader'
 import CharacterMenu from '../components/CharacterMenu/CharacterMenu';
 
 const characters = [
@@ -300,21 +298,11 @@ class App extends Component {
           <Col md="10">
             <article className="full">
               <Row>
-                <Col md="9">
-                  <div className="topic">Gabinete</div>
-                  <h1>El Gabinete de Alberto Fernández</h1>
-                  <div className="options">
-                    <ul>
-                        <li><a href="#"><FontAwesomeIcon icon={faBookmark} /> Leer más tarde</a></li>
-                        <li><a href="#"><FontAwesomeIcon icon={faShareAlt} /></a></li>
-                        <li><a href="#"><FontAwesomeIcon icon={faComment} /> 3</a></li>
-                        <li><a href="#"><FontAwesomeIcon icon={faHeart} /></a></li>
-                    </ul>
-                </div>
-                <p className="copete">El acto de apertura del Encuentro Nacional de Mujeres (ENM) estaba previsto para hoy a las 9:30 en el Estadio Único de La Plata. La suspensión fue dispuesta esta mañana por el cuartel de bomberos de La Plata debido a la tormenta eléctrica y las intensas lluvias.</p>
+                <Col md="12">
+                  <ArticleHeader title="Alberto Fernandez anunció su gabinete" />
                 </Col>
               </Row>
-              <CharacterMenu characters={characters} cols={5} />
+              <CharacterMenu characters={characters} cols={4} />
               <Row>
                 <Col md="9">
               <p>Horas más tarde, en conferencia de prensa, la Comisión Organizadora solicitó al gobierno que habilite todos los lugares posibles para que las “encuentreras” tengan un lugar para dormir y alojarse, ya que el clima impidió que muchas mujeres pudieran acampar en plazas y parques. Las inundaciones afectaron también a muchas escuelas que iban a ser usadas como refugio para las participantes.</p>

@@ -39,10 +39,7 @@ class CharacterMenu extends Component {
   }
 
   keyPressed = (e) => {
-
     let current = this.state.current;
-
-    console.log(this.props);
     if(e.key === 'ArrowDown') {
       current += this.props.cols;
     }
@@ -65,6 +62,12 @@ class CharacterMenu extends Component {
     }
   }
 
+  update = (current) => {
+    if(current !== this.state.current) { 
+      this.setState({ current });
+    }
+  }
+
   render() {
 
     const { characters, cols } = this.props;
@@ -73,7 +76,7 @@ class CharacterMenu extends Component {
     return (
       <Wrapper>
         <Col md="7">
-          <CharacterList cols={cols} characters={characters} current={current} />
+          <CharacterList cols={cols} characters={characters} current={current} updated={this.update} />
         </Col>
         <Col md="5">
           <Character {...characters[current]} />

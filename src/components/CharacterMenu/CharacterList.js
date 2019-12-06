@@ -22,7 +22,7 @@ class CharacterList extends Component {
 
     const size = (this.props.cols) ? (100 / this.props.cols) - 1 : 19;
     const characters = this.props.characters.map((item, index) => {
-      return <CharacterOption size={size} key={'charop-' + index} {...item} selected={index === this.props.current} />
+      return <CharacterOption index={index} size={size} key={'charop-' + index} {...item} selected={index === this.props.current} onselect={this.props.updated} />
     })
 
     return (
