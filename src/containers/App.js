@@ -3,6 +3,10 @@ import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap';
 import Header from '../components/Header/Header'
 import ArticleHeader from '../components/Article/ArticleHeader'
+import ArticleActions from '../components/Article/ArticleActions'
+import ArticleBlock from '../components/Article/ArticleBlock'
+import LinkList from '../components/Article/LinkList'
+import CommentBox from '../components/Article/CommentBox'
 import CharacterMenu from '../components/CharacterMenu/CharacterMenu';
 
 const characters = [
@@ -285,6 +289,18 @@ const SidebarWrapper = styled(Col)`
   border-right: 1px solid #ddd;
 `
 
+const ArticleAsideWrapper = styled(Col)`
+  border-left: 1px solid #ddd;
+`
+
+const ArticleAside = styled.aside`
+  margin: 0 !important;
+`
+
+const ArticleAsideSection = styled.section`
+border-bottom: 1px solid #ddd;
+`
+
 class App extends Component {
 
   render() {
@@ -305,93 +321,64 @@ class App extends Component {
               <CharacterMenu characters={characters} cols={4} />
               <Row>
                 <Col md="9">
-              <p>Horas más tarde, en conferencia de prensa, la Comisión Organizadora solicitó al gobierno que habilite todos los lugares posibles para que las “encuentreras” tengan un lugar para dormir y alojarse, ya que el clima impidió que muchas mujeres pudieran acampar en plazas y parques. Las inundaciones afectaron también a muchas escuelas que iban a ser usadas como refugio para las participantes.</p>
-                                        <p>A pesar de los inconvenientes, afirmaron que “para nosotras los encuentros empiezan cuando llegamos a la ciudad sede. Más allá de haber tenido que suspender el acto de apertura, que fue una decisión para cuidar y resguardar la integridad física de todas las encuentreras, los talleres, que son el corazón de los encuentros, estarán abiertos tal como estaban acordados.”</p>
-                                        <audio src="http://provinciaradio.com.ar/wp-content/uploads/2019/10/Conferencia-de-prensa-co.mp3" controls=""></audio>
-                                        <p>Las actividades del día de hoy se realizarán de manera simultánea en las diferentes instalaciones de la Universidad Nacional de La Plata, entre las 15 y las 18 hs. La agenda completa para el fin de semana se puede consultar en <a href="#">la app lanzada especialmente para este Encuentro</a>.</p>
-                                        <p>Las actividades del día de hoy se realizarán de manera simultánea en las diferentes instalaciones de la Universidad Nacional de La Plata, entre las 15 y las 18 hs. La agenda completa para el fin de semana se puede consultar en <a href="#">la app lanzada especialmente para este Encuentro</a>.</p>
-
-                                        <p>Las actividades del día de hoy se realizarán de manera simultánea en las diferentes instalaciones de la Universidad Nacional de La Plata, entre las 15 y las 18 hs. La agenda completa para el fin de semana se puede consultar en <a href="#">la app lanzada especialmente para este Encuentro</a>.</p>
-                                        <p>Las actividades del día de hoy se realizarán de manera simultánea en las diferentes instalaciones de la Universidad Nacional de La Plata, entre las 15 y las 18 hs. La agenda completa para el fin de semana se puede consultar en <a href="#">la app lanzada especialmente para este Encuentro</a>.</p>
-
-                                        <div className="options">
-                                            <ul>
-                                                <li><a href="#"><i className="fa fa-share-alt" aria-hidden="true"></i></a></li>
-                                                <li><a href="#"><i className="fa fa-heart" aria-hidden="true"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <aside>
-                                            <h2>Seguí leyendo</h2>
-                                            <ul className="news-list">
-                                                <li><a href="#">Plata se prepara para el 34º Encuentro Nacional de Mujeres</a></li>
-                                                <li><a href="#">Lanzan una app para el 34º Encuentro Nacional de Mujeres</a></li>
-                                            </ul>
-                                            <h2>Etiquetas</h2>     
-                                            <ul className="tag-list">
-                                                <li><a href="#">Encuentro Nacional de Mujeres</a></li>
-                                                <li><a href="#">34ENM</a></li>
-                                                <li><a href="#">La Plata</a></li>
-                                                <li><a href="#">Tormenta</a></li>
-                                                <li><a href="#">Inundaciones en La Plata</a></li>
-                                            </ul>
-                                            <h2>Comentarios</h2>
-                                            <p>Aún no hay comentarios.</p> 
-                                            <textarea name="comment" id="comment" cols="30" rows="3" className="form-control"></textarea>
-                                        </aside>
-                                        </Col>
-                                        <Col md="3">
-              <aside className="---col-md-3 column-bordered not-left">
-                        <h2>Temas del día</h2>
-                        <ul>
-                            <li><a href="#">Encuentro Nacional de Mujeres</a></li>
-                            <li><a href="#">Debate presidencial</a></li>
-                            <li><a href="#">Protestas en Ecuador</a></li>
-                            <li><a href="#">Donda enfrenta a policías</a></li>
-                        </ul>
-                        <h2>Temas seguidos</h2>
-                        <ul>
-                            <li><a href="#">Elecciones 2019</a></li>
-                            <li><a href="#">Mundial de atletismo Dubai 2019</a></li>
-                        </ul>
-                    </aside>
-                    <div className="---col-md-3 column-bordered searchbox not-left">
-                        <input type="text" className="form-control" placeholder="Buscar" />
-                    </div>
-                    <div className="---col-md-3 column-bordered not-left">
-                        <article>
-                            {/* <div className="pic" style="background-image: url(img/mujeres.jpg);"> */}
-                            <div className="pic">
-
-                                <div className="topic">
-                                    Encuentro Nacional de Mujeres
-                                </div>
-                            </div>
-                            <h2><a href="#">La Plata se prepara para el 34º Encuentro Nacional de Mujeres</a></h2>
-                            <p>Con la participación de más de 200.000 personas, se espera que sea el Encuentro más masivo de la historia. Habrá más de 90 actividades culturales y transporte gratuito desde el Estadio al centro de la ciudad.</p>
-                            <div className="options">
-                                <ul>
-                                    <li><a href="#"><i className="fa fa-bookmark-o" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i className="fa fa-share-alt" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i className="fa fa-comment-o" aria-hidden="true"></i> 3</a></li>
-                                    <li><a href="#"><i className="fa fa-heart" aria-hidden="true"></i></a></li>
-                                </ul>
-                            </div>
-                        </article>
-                    </div>
-                    <div className="---col-md-3 column-bordered not-left sticky">
-                        <h2>Continuar leyendo</h2>
-                        <ul className="news-list">
-                            <li><a href="#">Lanzan una app para el 34º Encuentro Nacional de Mujeres</a></li>
-                            <li><a href="#">Hoy es el "Día para salir del clóset"</a></li>
-                        </ul>
-                        <h2>Te puede interesar</h2>
-                        <ul className="news-list">
-                            <li><a href="#">La Plata se prepara para recibir el 34º Encuentro Nacional de Mujeres</a></li>
-                            <li><a href="#">Décimo día de protestas en Ecuador</a></li>
-                            <li><a href="#">¿Actuó bien Victoria Donda?</a></li>
-                        </ul>
-                    </div>
-                    </Col>
+                  <p>Horas más tarde, en conferencia de prensa, la Comisión Organizadora solicitó al gobierno que habilite todos los lugares posibles para que las “encuentreras” tengan un lugar para dormir y alojarse, ya que el clima impidió que muchas mujeres pudieran acampar en plazas y parques. Las inundaciones afectaron también a muchas escuelas que iban a ser usadas como refugio para las participantes.</p>
+                  <p>A pesar de los inconvenientes, afirmaron que “para nosotras los encuentros empiezan cuando llegamos a la ciudad sede. Más allá de haber tenido que suspender el acto de apertura, que fue una decisión para cuidar y resguardar la integridad física de todas las encuentreras, los talleres, que son el corazón de los encuentros, estarán abiertos tal como estaban acordados.”</p>
+                  <audio src="http://provinciaradio.com.ar/wp-content/uploads/2019/10/Conferencia-de-prensa-co.mp3" controls=""></audio>
+                  <p>Las actividades del día de hoy se realizarán de manera simultánea en las diferentes instalaciones de la Universidad Nacional de La Plata, entre las 15 y las 18 hs. La agenda completa para el fin de semana se puede consultar en <a href="#">la app lanzada especialmente para este Encuentro</a>.</p>
+                  <p>Las actividades del día de hoy se realizarán de manera simultánea en las diferentes instalaciones de la Universidad Nacional de La Plata, entre las 15 y las 18 hs. La agenda completa para el fin de semana se puede consultar en <a href="#">la app lanzada especialmente para este Encuentro</a>.</p>
+                  <p>Las actividades del día de hoy se realizarán de manera simultánea en las diferentes instalaciones de la Universidad Nacional de La Plata, entre las 15 y las 18 hs. La agenda completa para el fin de semana se puede consultar en <a href="#">la app lanzada especialmente para este Encuentro</a>.</p>
+                  <p>Las actividades del día de hoy se realizarán de manera simultánea en las diferentes instalaciones de la Universidad Nacional de La Plata, entre las 15 y las 18 hs. La agenda completa para el fin de semana se puede consultar en <a href="#">la app lanzada especialmente para este Encuentro</a>.</p>
+                  <ArticleActions likes share />
+                  <aside>
+                    <LinkList title="Seguí leyendo" items={[
+                      'Plata se prepara para el 34º Encuentro Nacional de Mujeres',
+                      'Lanzan una app para el 34º Encuentro Nacional de Mujeres'
+                    ]} news />
+                    <LinkList title="Seguí leyendo" items={[
+                      'Encuentro Nacional de Mujeres',
+                      '34ENM',
+                      'La Plata',
+                      'Tormenta',
+                      '34ENM',
+                      'Inundaciones en La Plata'
+                    ]} tags />
+                    <CommentBox />
+                  </aside>
+                </Col>
+                <ArticleAsideWrapper md="3">
+                  <ArticleAside>
+                    <ArticleAsideSection>
+                      <LinkList title="Temas del día" items={[
+                        'Encuentro Nacional de Mujeres',
+                        'Debate presidencial',
+                        'Protestas en Ecuador',
+                        'Donda enfrenta a policías'
+                      ]} />
+                      <LinkList title="Temas seguidos" items={[
+                        'Elecciones 2019',
+                        'Mundial de atletismo Dubai 2019'
+                      ]} />
+                    </ArticleAsideSection>
+                    <ArticleAsideSection>
+                      <ArticleBlock topic="Encuentro Nacional de Mujeres" title="La Plata se prepara para el 34º Encuentro Nacional de Mujeres">
+                        Con la participación de más de 200.000 personas, se espera que sea el Encuentro más masivo de la historia. Habrá más de 90 actividades culturales y transporte gratuito desde el Estadio al centro de la ciudad.
+                      </ArticleBlock>
+                    </ArticleAsideSection>
+                    <ArticleAsideSection>
+                      <LinkList title="Continuar leyendo" items={[
+                        'Lanzan una app para el 34º Encuentro Nacional de Mujeres',
+                        'Hoy es el "Día para salir del clóset'
+                      ]} news  />
+                    </ArticleAsideSection>
+                    <section>
+                      <LinkList title="Te puede interesar" items={[
+                        'La Plata se prepara para recibir el 34º Encuentro Nacional de Mujeres',
+                        'Décimo día de protestas en Ecuador',
+                        '¿Actuó bien Victoria Donda'
+                      ]} news  />
+                    </section>
+                  </ArticleAside>
+                </ArticleAsideWrapper>
               </Row>
             </article>
           </Col>

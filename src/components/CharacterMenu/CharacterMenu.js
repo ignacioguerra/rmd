@@ -4,7 +4,7 @@ import { Row, Col } from 'react-bootstrap';
 import CharacterList from './CharacterList';
 import Character from './Character';
 
-const Wrapper = styled(Row)`
+const Wrapper = styled.section`
   padding-top: 1em;
   padding-bottom: 2em;
   margin-bottom: 2em;
@@ -16,8 +16,8 @@ const Wrapper = styled(Row)`
     position: absolute;
     border-bottom: 1px solid #ddd;
     bottom: 0;
-    left: 15px;
-    right: 15px;
+    left: 0;
+    right: 0;
   }
 `
 
@@ -75,12 +75,14 @@ class CharacterMenu extends Component {
 
     return (
       <Wrapper>
-        <Col md="7">
-          <CharacterList cols={cols} characters={characters} current={current} updated={this.update} />
-        </Col>
-        <Col md="5">
-          <Character {...characters[current]} />
-        </Col>
+        <Row>
+          <Col md="7">
+            <CharacterList cols={cols} characters={characters} current={current} updated={this.update} />
+          </Col>
+          <Col md="5">
+            <Character {...characters[current]} />
+          </Col>
+        </Row>
       </Wrapper>
     );
   }

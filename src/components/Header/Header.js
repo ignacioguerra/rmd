@@ -10,6 +10,7 @@ const Wrapper = styled.header`
   padding-top: 20px;
 `
 const Title = styled.h1`
+  margin-top: 0;
   margin-bottom: 10px;
 `
 
