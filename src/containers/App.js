@@ -20,25 +20,7 @@ const characters = [
     age: null 
   },
   { 
-    name: 'Julio Vitobello',
-    role: 'Secretaría General de la Presidencia',
-    abbr: { name: 'Vitobello', role: 'S.G. de la Presidencia' },
-    img: { small: 'vitobello_250x250.jpg', big: 'vitobello_400x500.jpg' },
-    confirmed: false,
-    description: '',
-    age: null 
-  },
-  { 
-    name: 'Vilma Ibarra',
-    role: 'Secretaría Legal y Técnica',
-    abbr: { name: 'Ibarra', role: 'Legal y Técnica' },
-    img: { small: 'ibarra_250x250.jpg', big: 'ibarra_400x500.jpg' },
-    confirmed: true,
-    description: '',
-    age: null 
-  },
-  { 
-    name: '??? Martín Guzmán y M. Abeles',
+    name: 'Martín Guzmán',
     role: 'Ministerio de Economía',
     abbr: { name: 'Guzmán', role: 'Economía' },
     img: { small: 'guzman_250x250.jpg', big: 'guzman_400x500.jpg' },
@@ -52,15 +34,6 @@ const characters = [
     abbr: { name: 'Kulfas', role: 'Producción' },
     img: { small: 'kulfas_250x250.jpg', big: 'kulfas_400x500.jpg' },
     confirmed: false,
-    description: '',
-    age: null 
-  },
-  { 
-    name: 'Miguel Ángel Pesce',
-    role: 'Titular del Banco Central',
-    abbr: { name: 'Pesce', role: 'Banco Central' },
-    img: { small: 'pesce_250x250.jpg', big: 'pesce_400x500.jpg' },
-    confirmed: true,
     description: '',
     age: null 
   },
@@ -92,24 +65,6 @@ const characters = [
     age: null 
   },
   { 
-    name: 'Sergio Lanziani',
-    role: 'Ministerio de Energía',
-    abbr: { name: 'Lanziani', role: 'Energía' },
-    img: { small: 'lanziani_250x250.jpg', big: 'lanziani_400x500.jpg' },
-    confirmed: false,
-    description: '',
-    age: null 
-  },
-  { 
-    name: 'Alberto Hensel',
-    role: 'Ministerio de Minería',
-    abbr: { name: 'Hensel', role: 'Minería' },
-    img: { small: 'hensel_250x250.jpg', big: 'hensel_400x500.jpg' },
-    confirmed: false,
-    description: '',
-    age: null 
-  },
-  { 
     name: 'Marcela Losardo',
     role: 'Ministerio de Justicia',
     abbr: { name: 'Losardo', role: 'Justicia' },
@@ -129,8 +84,8 @@ const characters = [
   },
   { 
     name: 'María Eugenia Bielsa',
-    role: 'Ministerio de Vivienda y Hábitat',
-    abbr: { name: 'Bielsa', role: 'Vivienda' },
+    role: 'Ministerio de Desarrollo Territorial',
+    abbr: { name: 'Bielsa', role: 'Desarrollo Territorial' },
     img: { small: 'bielsa_250x250.jpg', big: 'bielsa_400x500.jpg' },
     confirmed: true,
     description: '',
@@ -174,8 +129,8 @@ const characters = [
   },
   { 
     name: 'Elisabeth Gómez Alcorta',
-    role: 'Ministerio de Equidad',
-    abbr: { name: 'Gómez Alcorta', role: 'Equidad' },
+    role: 'Ministerio de la Mujer',
+    abbr: { name: 'Gómez Alcorta', role: 'Mujer' },
     img: { small: 'gomezalcorta_250x250.jpg', big: 'gomezalcorta_400x500.jpg' },
     confirmed: true,
     description: '',
@@ -218,27 +173,9 @@ const characters = [
     age: null 
   },
   { 
-    name: 'Francisco Meritello',
-    role: 'Secretaría de Medios Públicos',
-    abbr: { name: 'Meritello', role: 'Medios Públicos' },
-    img: { small: 'meritello_250x250.jpg', big: 'meritello_400x500.jpg' },
-    confirmed: false,
-    description: '',
-    age: null 
-  },
-  { 
     name: 'Matías Lammens',
     role: 'Ministerio de Turismo y Deportes',
     abbr: { name: 'Lammens', role: 'Turismo y Deportes' },
-    img: { small: 'lammens_250x250.jpg', big: 'lammens_400x500.jpg' },
-    confirmed: true,
-    description: '',
-    age: null 
-  },
-  { 
-    name: 'Inés Arrondo',
-    role: 'Secretaria de Deportes',
-    abbr: { name: 'Arrondo', role: 'Deportes' },
     img: { small: 'lammens_250x250.jpg', big: 'lammens_400x500.jpg' },
     confirmed: true,
     description: '',
@@ -254,11 +191,74 @@ const characters = [
     age: null 
   },
   { 
-    name: 'Marco Lavagna',
-    role: 'Titular del INDEC',
-    abbr: { name: 'Lavagna', role: 'INDEC' },
-    img: { small: 'lavagna_250x250.jpg', big: 'lavagna_400x500.jpg' },
+    name: 'Juan Cabandié',
+    role: 'Ministerio de Ambiente',
+    abbr: { name: 'Cabandié', role: 'Ambiente' },
+    img: { small: 'cabandie_250x250.jpg', big: 'cabandie_400x500.jpg' },
     confirmed: false,
+    description: '',
+    age: null 
+  },
+  { 
+    name: 'Julio Vitobello',
+    role: 'Secretaría General de la Presidencia',
+    abbr: { name: 'Vitobello', role: 'S.G. de la Presidencia' },
+    img: { small: 'vitobello_250x250.jpg', big: 'vitobello_400x500.jpg' },
+    confirmed: false,
+    description: '',
+    age: null 
+  },
+  { 
+    name: 'Vilma Ibarra',
+    role: 'Secretaría Legal y Técnica',
+    abbr: { name: 'Ibarra', role: 'Legal y Técnica' },
+    img: { small: 'ibarra_250x250.jpg', big: 'ibarra_400x500.jpg' },
+    confirmed: true,
+    description: '',
+    age: null 
+  },
+  { 
+    name: 'Gustavo Béliz',
+    role: 'Secretaría de Asuntos Estratégicos',
+    abbr: { name: 'Béliz', role: 'Asuntos Estratégicos' },
+    img: { small: 'lanziani_250x250.jpg', big: 'lanziani_400x500.jpg' },
+    confirmed: false,
+    description: '',
+    age: null 
+  },
+  { 
+    name: 'Sergio Lanziani',
+    role: 'Secretaría de Energía',
+    abbr: { name: 'Lanziani', role: 'Energía' },
+    img: { small: 'lanziani_250x250.jpg', big: 'lanziani_400x500.jpg' },
+    confirmed: false,
+    description: '',
+    age: null 
+  },
+  { 
+    name: 'Alberto Hensel',
+    role: 'Secretaría de Minería',
+    abbr: { name: 'Hensel', role: 'Minería' },
+    img: { small: 'hensel_250x250.jpg', big: 'hensel_400x500.jpg' },
+    confirmed: false,
+    description: '',
+    age: null 
+  },
+  { 
+    name: 'Francisco Meritello',
+    role: 'Secretaría de Medios Públicos',
+    abbr: { name: 'Meritello', role: 'Medios Públicos' },
+    img: { small: 'meritello_250x250.jpg', big: 'meritello_400x500.jpg' },
+    confirmed: false,
+    description: '',
+    age: null 
+  },
+  { 
+    name: 'Inés Arrondo',
+    role: 'Secretaría de Deportes',
+    abbr: { name: 'Arrondo', role: 'Deportes' },
+    img: { small: 'lammens_250x250.jpg', big: 'lammens_400x500.jpg' },
+    confirmed: true,
     description: '',
     age: null 
   },
@@ -272,17 +272,32 @@ const characters = [
     age: null 
   },
   { 
-    name: 'Juan Cabandié',
-    role: 'Secretaría de Medio Ambiente',
-    abbr: { name: 'Cabandié', role: 'Ambiente' },
-    img: { small: 'cabandie_250x250.jpg', big: 'cabandie_400x500.jpg' },
+    name: 'Miguel Ángel Pesce',
+    role: 'Titular del Banco Central',
+    abbr: { name: 'Pesce', role: 'Banco Central' },
+    img: { small: 'pesce_250x250.jpg', big: 'pesce_400x500.jpg' },
+    confirmed: true,
+    description: '',
+    age: null 
+  },
+  { 
+    name: 'Alejandro Vanoli',
+    role: 'Titular de ANSES',
+    abbr: { name: 'Vanoli', role: 'ANSES' },
+    img: { small: 'lavagna_250x250.jpg', big: 'lavagna_400x500.jpg' },
     confirmed: false,
     description: '',
     age: null 
   },
-  // Gustavo Béliz,  Asuntos Estratégicos
-  // Marcó del Pont prepara su desembarco en la AFIP
-  // Vanoli será el titular de Anses
+  { 
+    name: 'Marco Lavagna',
+    role: 'Titular del INDEC',
+    abbr: { name: 'Lavagna', role: 'INDEC' },
+    img: { small: 'lavagna_250x250.jpg', big: 'lavagna_400x500.jpg' },
+    confirmed: false,
+    description: '',
+    age: null 
+  },
 ]
 
 const SidebarWrapper = styled(Col)`
@@ -315,19 +330,15 @@ class App extends Component {
             <article className="full">
               <Row>
                 <Col md="12">
-                  <ArticleHeader title="Alberto Fernandez anunció su gabinete" />
+                  <ArticleHeader title="Alberto Fernandez anunció su gabinete" topic="Gabinete">
+                    <p>Con la revelación de que Martín Guzmán será el ministro de Economía, Alberto Fernández terminó con todas las incógnitas respecto al elenco de su gabinete.</p>
+                  </ArticleHeader>
                 </Col>
               </Row>
               <CharacterMenu characters={characters} cols={4} />
               <Row>
                 <Col md="9">
-                  <p>Horas más tarde, en conferencia de prensa, la Comisión Organizadora solicitó al gobierno que habilite todos los lugares posibles para que las “encuentreras” tengan un lugar para dormir y alojarse, ya que el clima impidió que muchas mujeres pudieran acampar en plazas y parques. Las inundaciones afectaron también a muchas escuelas que iban a ser usadas como refugio para las participantes.</p>
-                  <p>A pesar de los inconvenientes, afirmaron que “para nosotras los encuentros empiezan cuando llegamos a la ciudad sede. Más allá de haber tenido que suspender el acto de apertura, que fue una decisión para cuidar y resguardar la integridad física de todas las encuentreras, los talleres, que son el corazón de los encuentros, estarán abiertos tal como estaban acordados.”</p>
-                  <audio src="http://provinciaradio.com.ar/wp-content/uploads/2019/10/Conferencia-de-prensa-co.mp3" controls=""></audio>
-                  <p>Las actividades del día de hoy se realizarán de manera simultánea en las diferentes instalaciones de la Universidad Nacional de La Plata, entre las 15 y las 18 hs. La agenda completa para el fin de semana se puede consultar en <a href="#">la app lanzada especialmente para este Encuentro</a>.</p>
-                  <p>Las actividades del día de hoy se realizarán de manera simultánea en las diferentes instalaciones de la Universidad Nacional de La Plata, entre las 15 y las 18 hs. La agenda completa para el fin de semana se puede consultar en <a href="#">la app lanzada especialmente para este Encuentro</a>.</p>
-                  <p>Las actividades del día de hoy se realizarán de manera simultánea en las diferentes instalaciones de la Universidad Nacional de La Plata, entre las 15 y las 18 hs. La agenda completa para el fin de semana se puede consultar en <a href="#">la app lanzada especialmente para este Encuentro</a>.</p>
-                  <p>Las actividades del día de hoy se realizarán de manera simultánea en las diferentes instalaciones de la Universidad Nacional de La Plata, entre las 15 y las 18 hs. La agenda completa para el fin de semana se puede consultar en <a href="#">la app lanzada especialmente para este Encuentro</a>.</p>
+                  <p>Así se conforma el gabinete: Santiago Cafiero (jefe de Gabiente), Martín Guzmán (Economía), Matías Kulfas (Producción), Miguel Ángel Pesce (Banco Central), Ginés González García (Salud), Agustín Rossi (Defensa), Daniel Arroyo (Desarrollo Social), Felipe Solá (Cancillería), María Eugenia Bielsa (Desarrollo Territorial), Eduardo "Wado" de Pedro (Interior), Marcela Losardo (Justicia), Nicolás Trotta (Educación), Tristán Bauer (Cultura), Roberto Salvarezza (Ciencia y Tecnología), G abriel Katopodis (Obras Públicas), Claudio Moroni (Trabajo), Matías Lammens (Turismo y Deportes), Elizabeth Gómez Alcorta (Mujer), Mario Meoni (Transporte), Sabina Frederic (Seguridad), Juan Cabandié (Ambiente) y Luis Basterra (Agricultura), Gustavo Beliz (Asuntos Estratégicos), Vilma Ibarra (Legal y Técnica) y Julio Vitobello (secretaría general de la Presidencia).</p>
                   <ArticleActions likes share />
                   <aside>
                     <LinkList title="Seguí leyendo" items={[
