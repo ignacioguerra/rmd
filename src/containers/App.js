@@ -221,7 +221,7 @@ const characters = [
     name: 'Gustavo Béliz',
     role: 'Secretaría de Asuntos Estratégicos',
     abbr: { name: 'Béliz', role: 'Asuntos Estratégicos' },
-    img: { small: 'lanziani_250x250.jpg', big: 'lanziani_400x500.jpg' },
+    img: { small: 'beliz_250x250.jpg', big: 'beliz_400x500.jpg' },
     confirmed: false,
     description: '',
     age: null 
@@ -257,7 +257,7 @@ const characters = [
     name: 'Inés Arrondo',
     role: 'Secretaría de Deportes',
     abbr: { name: 'Arrondo', role: 'Deportes' },
-    img: { small: 'lammens_250x250.jpg', big: 'lammens_400x500.jpg' },
+    img: { small: 'arrondo_250x250.jpg', big: 'arrondo_400x500.jpg' },
     confirmed: true,
     description: '',
     age: null 
@@ -284,7 +284,7 @@ const characters = [
     name: 'Alejandro Vanoli',
     role: 'Titular de ANSES',
     abbr: { name: 'Vanoli', role: 'ANSES' },
-    img: { small: 'lavagna_250x250.jpg', big: 'lavagna_400x500.jpg' },
+    img: { small: 'vanoli_250x250.jpg', big: 'vanoli_400x500.jpg' },
     confirmed: false,
     description: '',
     age: null 
@@ -324,7 +324,7 @@ class App extends Component {
       <Container>
         <Row>
           <SidebarWrapper md="2">
-            <Header title="RMDDiario" />
+            <Header title="LPDiario" />
           </SidebarWrapper>
           <Col md="10">
             <article className="full">
