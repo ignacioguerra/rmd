@@ -285,7 +285,7 @@ const characters = [
   // Vanoli será el titular de Anses
 ]
 
-const SidebarWrapper = styled(Col)`
+const MainCol = styled(Col)`
   border-right: 1px solid #ddd;
 `
 
@@ -298,7 +298,7 @@ const ArticleAside = styled.aside`
 `
 
 const ArticleAsideSection = styled.section`
-border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 `
 
 class App extends Component {
@@ -308,10 +308,10 @@ class App extends Component {
     return (
       <Container>
         <Row>
-          <SidebarWrapper md="2">
+          <MainCol md="2">
             <Header title="RMDDiario" />
-          </SidebarWrapper>
-          <Col md="10">
+          </MainCol>
+          <MainCol md="10">
             <article className="full">
               <Row>
                 <Col md="12">
@@ -365,23 +365,23 @@ class App extends Component {
                       </ArticleBlock>
                     </ArticleAsideSection>
                     <ArticleAsideSection>
-                      <LinkList title="Continuar leyendo" items={[
-                        'Lanzan una app para el 34º Encuentro Nacional de Mujeres',
-                        'Hoy es el "Día para salir del clóset'
-                      ]} news  />
-                    </ArticleAsideSection>
-                    <section>
                       <LinkList title="Te puede interesar" items={[
                         'La Plata se prepara para recibir el 34º Encuentro Nacional de Mujeres',
                         'Décimo día de protestas en Ecuador',
                         '¿Actuó bien Victoria Donda'
+                      ]} news  />
+                    </ArticleAsideSection>
+                    <section>
+                      <LinkList title="Continuar leyendo" items={[
+                        'Lanzan una app para el 34º Encuentro Nacional de Mujeres',
+                        'Hoy es el "Día para salir del clóset'
                       ]} news  />
                     </section>
                   </ArticleAside>
                 </ArticleAsideWrapper>
               </Row>
             </article>
-          </Col>
+          </MainCol>
         </Row>
       </Container>
     );
