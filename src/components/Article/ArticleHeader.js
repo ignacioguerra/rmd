@@ -16,10 +16,10 @@ const ArticleHeader = (props) => {
   return (
     <div>
 
-      <div className="topic">Gabinete</div>
+      <div className="topic">{props.topic}</div>
       <h1>{props.title}</h1>
       <ArticleActions comments="2" />
-      <p className="copete">El acto de apertura del Encuentro Nacional de Mujeres (ENM) estaba previsto para hoy a las 9:30 en el Estadio Único de La Plata. La suspensión fue dispuesta esta mañana por el cuartel de bomberos de La Plata debido a la tormenta eléctrica y las intensas lluvias.</p>
+      <p className="copete">{props.children}</p>
     </div>
   );
 }
